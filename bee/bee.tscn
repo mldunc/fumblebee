@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://bee/bee.png" type="Texture" id=1]
+[ext_resource path="res://bee/bee.gd" type="Script" id=2]
+
+[node name="bee" type="KinematicBody2D"]
+motion/sync_to_physics = true
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+flip_h = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( 0.840912, 0 )
+polygon = PoolVector2Array( 13.0944, -19.1452, 26.8138, -40.5867, 50.9467, -27.959, 39.5986, -11.7953, 44.7731, -0.739319, 44.2119, 10.7659, 41.4058, 17.7813, 44.0821, 25.0811, 33.8078, 31.8587, 29.3533, 27.4042, 16.1504, 28.1641, 6.60945, 25.0773, 4.85356, 20.9452, -0.269104, 39.8768, -11.216, 44.4057, -23.9776, 44.7204, -32.9573, 35.7407, -34.1232, 10.0317, -27.4415, -1.54998, -51.7185, -11.5726, -47.9322, -20.4816, -49.5137, -25.4335, -33.238, -42.2704, -3.16452, -17.5862 )
