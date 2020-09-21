@@ -1,10 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://stage/main.gd" type="Script" id=1]
-[ext_resource path="res://counter/Digit.tscn" type="PackedScene" id=2]
 [ext_resource path="res://stage/blue_grass.png" type="Texture" id=3]
 [ext_resource path="res://pillar/Pillar.tscn" type="PackedScene" id=4]
-[ext_resource path="res://counter/Digit.gd" type="Script" id=5]
 [ext_resource path="res://stage/goal.tscn" type="PackedScene" id=6]
 [ext_resource path="res://bee/bee.tscn" type="PackedScene" id=7]
 
@@ -30,10 +28,6 @@ position = Vector2( 1317, 180.244 )
 [node name="floor" parent="." instance=ExtResource( 4 )]
 position = Vector2( 883.664, 966.424 )
 rotation = 1.5708
-
-[node name="Counter" parent="." instance=ExtResource( 2 )]
-position = Vector2( 300, 64 )
-script = ExtResource( 5 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 margin_left = -0.0451965

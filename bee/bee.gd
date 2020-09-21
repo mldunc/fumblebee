@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 const GRAVITY = 1900
 var is_dead = false
-var FLAP_VELOCITY = Vector2(0, -500)
+var FLAP_VELOCITY = Vector2(0, -700)
 var should_flap = false
 var velocity = Vector2()
 

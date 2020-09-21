@@ -2,6 +2,7 @@ extends Node
 
 const SCREEN_WIDTH: float = 600.0
 const SCREEN_HEIGHT: float = 800.0
+const MARGIN: float = 150.0
 
 const SEGMENT_WIDTH = -1
 const SPEED = 250
@@ -39,7 +40,7 @@ func _process(delta):
 
 func respawn_goal(goal, x_pos):
 	goal.position.x = x_pos
-	goal.position.y = rand_range(0.0, SCREEN_HEIGHT)
+	goal.position.y = rand_range(0.0 + MARGIN, SCREEN_HEIGHT - MARGIN)
 
 # Increase the score
 func increase_score(_collider):
