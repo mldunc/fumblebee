@@ -11,6 +11,7 @@ signal score_changed(amount)
 
 func reset():
 	score = 0
+	emit_signal("score_changed", 0)
 	$bee.velocity.y = 0.0
 	$bee.position = Vector2(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 3)
 	respawn_goal($goal, SCREEN_WIDTH * 2)
@@ -43,8 +44,8 @@ func respawn_goal(goal, x_pos):
 # Increase the score
 func increase_score(_collider):
 	score += 1
-	emit_signal("score", 1)
-	print("score: ", score)
+	emit_signal("score_changed", score)
+	print("\"score_changed\" signal emmitted")
 
 func _on_bee_die():
 	OS.delay_msec(500)
